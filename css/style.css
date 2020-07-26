@@ -1,271 +1,293 @@
-body{
-    font-family: 'segoe print' , 'Comic Sans Ms regular';
-    overflow-x: hidden
+:root {
+    --main-bg-color: #636e72;
+    --main-color: #d2dae2;
 }
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tajawal', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    background: var(--main-color);
+}
+
+.navbar {
+    width: 100%;
+    height: 50px;
+    background: var(--main-bg-color);
+    color: var(--main-color);
+    border: none;
+    border-radius: 0;
+    box-shadow: 7px 7px 24px rgb(31, 29, 29);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: var(--main-color);
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: var(--main-bg-color);
+    background: var(--main-color);
+}
+
+.navbar-default .navbar-nav>.active>a {
+    background: transparent;
+}
+
+.navbar-collapse {
+    background: var(--main-bg-color);
+}
+
+.navbar-brand {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.co-name {
+    margin: 9rem auto 2rem auto;
+    padding: 10px;
+    color: #fff;
+    position: relative;
+    width: 300px;
+    text-shadow: var(--main-bg-color) 5px 5px 3px;
+}
+
+.co-name::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: var(--main-bg-color);
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    box-shadow: var(--main-bg-color) 4px 4px 4px;
+}
+
+/* start content */
 
 .content {
-    position: relative;
-    z-index: 2;
-    background: #fff;
-    margin-bottom: 260px
+    margin: 10rem 0;
 }
-.content article{
-    
-}
-/* start article */
 
-figure{
-    margin: auto
-}
-.content article {
-    max-width: 740px;
-    padding: 100px 0;
-    margin: 0 auto
-}
-.content article h1{
-    color: #ccc;
-    font-weight: 300
-}
-img{
-    max-width: 100%
-}
-/* end article */
-/* start header */
-.bird-box{
-    position: relative;
+.content .image {
     height: 600px;
-    background: url('../images/bird-box.jpg') center center no-repeat fixed;
-    background-size: cover;
-    overflow: hidden;
-    z-index: 2
-}
-.bird-box .logo {
-    width: 100%;
-    min-height: 100px;
-    padding: 20px 0;
-    position: absolute;
-    top: calc(50% - 60px);
-}
-.bird-box .logo .h1{
-    font-weight: bolder;
-    letter-spacing: 9px;
-}
-.bird-box .logo p{
-    width: 100px;
-    font-size: 22px;
-    margin: 0 auto;
-    position: relative
-}
-.bird-box .logo p:before,
-.bird-box .logo p:after
-{
-    content: '';
-    width: 80px;
-    height: 2px;
-    background: #000;
-    position: absolute;
-    top: 14px;
-    
-}
-.bird-box .logo p:before{
-  left: -80px  
-}
-.bird-box .logo p:after{
-  left: 100px  
-}
-.fort-bird{
-    height:100px;
-    width: 100px;
-    background: url("../images/fort-bird.png") no-repeat right bottom;
-    background-size: contain;
-    position: absolute;
-    right: 10%;top:92%
-}
-.back-bird{
-    height:100px;
-    width:100px;
-    background-image: url("../images/back-bird.png");
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: top left;
-    position: absolute;
-    left: 20%;top:20%
-}
-/* end header */
-/* start cloth-pics*/
-.cloth-pics{
-   overflow: hidden 
-}
-.cloth-pics .images{
-   overflow: hidden 
+    box-shadow: 4px 4px 4px rgba(51, 49, 49, 0.2);
+    position: relative;
+    margin: 3rem auto;
 }
 
-figure{
-    margin-bottom: 20px;
-    height: 350px;
-    padding: 0!important;
-    overflow: hidden;
-    opacity: 0;
-    position: relative;
-    transform: translateX(50px);
-}
-figure figcaption{
-    position: absolute;
-    bottom: 30px;
-    left: -80%;
-    background-color: #000;
-    color: #fff;
-    padding: 10px;
-    transition: all 1s ease-in-out
-}
-figure img{
-    cursor: pointer;
+.content .image::after {
+    content: '';
     width: 100%;
     height: 100%;
-    display: block;
-    margin: 0 auto;
-    transition: all 1s ease-in-out
-    
-}
-figure img:hover{
-    transform: scale(1.2)
-}
-
-figure:hover figcaption{
-    left: 0%;
-    cursor: pointer;
-    
-}
-
-.down{
-    opacity: 1;
-    transform: translateX(0px);
-    transition: all 0.7s ease-in-out
-}
-/* end cloth-pics */
-/* star large window */
-.large-window{
-    margin: 20px auto 0;
-    width: 440px;
-    height:440px;
-    background: url(../images/amr.jpg) repeat-y fixed top center;
-    border-radius: 100%;
-    background-size: 50% 100%;
-    position: relative
-}
-.large-window .overlay{
-    background: rgba(0, 0, 0, .4);
     position: absolute;
     top: 0;
-    right: 0;
     left: 0;
-    bottom: 0;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-}
-.large-window .overlay p{
-    font-size: 50px;
-    color:#fff;
-    font-weight: 100;
-    line-height: 1.1
-}
-.large-window .overlay p strong{
-    display: block;
-    font-size: 30px;
-    text-align: center
-}
-.large-window .overlay p span{
-    font-weight: normal;
-    font-size: 20px;
-    font-style: italic;
-    color: antiquewhite;
-  
-}
-.large-window .overlay p a{
-    text-decoration: none;
-    border: 1px solid #fff;
-    color: #fff;
-    font-size: 20px;
-    padding: 10px 20px;
-    display: block;
-    width: 150px;
-    margin: 20px auto
-    
-}
-.large-window .overlay p a:hover{
-    background: #fff;
-    color: #000;
-    transition: all .4s ease-in-out;
-
-}
-/* end large window */
-/* start blog posts */
-.plog-posts{
-     margin: 20px auto;
-     position: relative
+    background: #3498db;
+    opacity: 0.1;
+    transition: all 0.5s ease-in-out;
 }
 
-.plog-posts .post-1{
-    transform: translate(100px,20px);
+.content .image:hover::after {
+    opacity: 0.4;
 }
-.plog-posts .post-3{
-    transform: translate(100px, 20px);
-}
-.plog-posts .post-2{
-    z-index: 2
-}
-.plog-posts .post{
-    width: 96%;
-    margin: 0 2%;
-    background: #fff;
-   
-} 
-.plog-posts .post h3{
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 25px;
-    border: 0;
-    border-radius: none
-}
-.plog-posts .post img{
-    width: 100px;
-    height: 100px;
-}
-.plog-posts .post p{
-    margin: 20px 0;
-    padding: 0 20px;
-    line-height: 1.9
-}
-/* end plog posts */
-/* start footer */
-footer{
-    background: #000;
-    color: #fff;
-    padding: 40px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%
-}
-footer input[type='email'] {
+
+.content .image img {
     width: 100%;
-    padding: 8px 20px;
-    color: #333
+    height: 100%;
 }
-/* end footer */
-/* start my framework */
-.container{
-    max-width:740px
+
+.content .par {
+    background: #fff;
+    max-height: 900px;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #ddd;
+    padding: 6rem 1.5rem;
+    margin: 3rem auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
 }
-.capital{
-    text-transform: capitalize;
+
+.content .par:hover,
+.content .image:hover {
+    box-shadow: 4px 4px 4px rgb(170, 163, 163);
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
 }
-.upper{
-    text-transform: uppercase;
+
+.content .par button a {
+    color: #fff;
 }
-p{
-  text-transform: capitalize;  
+
+/* start footer */
+
+footer {
+    background: var(--main-bg-color);
+    color: #fff;
+    padding: 2.5em 0;
 }
-/* end  my framework */
+
+footer ul {
+    text-align: center;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 2rem;
+}
+
+footer ul li a {
+    text-decoration: none;
+    width: 30px;
+    background: hsla(0, 0%, 100%, 0.2);
+    display: inline-block;
+}
+
+footer ul li a .fa {
+    font-size: 2rem;
+    width: 100%;
+    color: #fff;
+    background: hsla(0, 0%, 100%, 0.2);
+    padding: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+footer ul li a .fa:hover {
+    color: #1b9cfc;
+    transition: color 0.3s ease-in-out;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    -ms-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+}
+
+footer .rights {
+    display: block;
+    text-align: center;
+}
+
+footer .rights a {
+    color: var(--main-color);
+    text-decoration: var(--main-color);
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bolder;
+    padding-bottom: 3rem;
+    margin-bottom: 3rem;
+}
+.top-instagram {
+    font-size: 3rem;
+    position: absolute;
+    left: 185px;
+    top: 7px;
+    color: white;
+}
+.top-instagram :hover {
+    text-decoration: none;
+    color:#ddd
+}
+.top-instagram i {
+    text-shadow: 1px 1px 1px rgb(212, 211, 211);
+}
+
+/* my global style  */
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+.scroll {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 30px;
+    bottom: 60px;
+    text-align: center;
+    display: none;
+    z-index: 10000;
+    transform: rotate(180deg);
+    background: #fff;
+    padding: 3px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: -3px -3px 5px #333;
+}
+
+.scroll .fa:hover {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.top-call {
+    position: fixed;
+    top: 0%;
+    left: 30px;
+    z-index: 4;
+    animation: bounce 0.5s infinite linear alternate;
+}
+
+.bottom-call {
+    position: fixed;
+    bottom: 1%;
+    right: 20px;
+    z-index: 4;
+    animation: bounce 0.5s infinite linear alternate;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2px);
+    }
+
+    100% {
+        transform: translateY(2px);
+    }
+}
+
+.bottom-call:hover,
+.top-call:hover {
+    animation: none;
+    -webkit-animation: none;
+}
